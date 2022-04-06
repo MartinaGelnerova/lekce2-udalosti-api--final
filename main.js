@@ -1,7 +1,18 @@
+let odstavec = document.getElementById('js-paragraph');
+let hudba = document.getElementById('js-audio');
+
+//on-mouse-over bold, on-mouse-out normal
+document.querySelector('#js-paragraph').addEventListener('mouseover', () => {
+  odstavec.style.fontWeight = 'bold';
+});
+document.querySelector('#js-paragraph').addEventListener('mouseout', () => {
+  odstavec.style.fontWeight = 'normal';
+});
+
 /**
  * Funkce přidá nebo odebere na prvku třídu, která se stará o červenou barvu písma
  */
-let odstavec = document.getElementById('js-paragraph');
+
 document.getElementById('prepniZcervenani').addEventListener('click', () => {
   odstavec.classList.toggle('cerveny-text');
 });
@@ -18,7 +29,7 @@ document.getElementById('zvetsitPismo').addEventListener('click', () => {
 /*--------------*/
 /* AUDIO FUNKCE */
 /*--------------*/
-let hudba = document.getElementById('js-audio');
+
 //tlačítko play
 document.getElementById('prehraj').addEventListener('click', () => {
   hudba.play();
